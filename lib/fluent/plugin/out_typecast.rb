@@ -61,6 +61,10 @@ class TypecastOutput < Output
       Proc.new {|value| Config.bool_value(value) }
     when 'time'
       Proc.new {|value| Time.strptime(value, @time_format) }
+    when 'time_string'
+      Proc.new {|value| 
+        Time.parse(value).strftime(@time_format)
+      }
     when 'array'
       Proc.new {|value| value.split(/\s*,\s*/) }
     else
