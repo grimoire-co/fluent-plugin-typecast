@@ -17,7 +17,7 @@ class TypecastOutput < Output
   config_param :tag,         :string, default: nil
   config_param :prefix,      :string, default: nil
 
-  ITEM_TYPES = ['json', 'string', 'integer', 'float', 'bool', 'time', 'array']
+  ITEM_TYPES = ['json', 'string', 'integer', 'float', 'bool', 'time', 'time_string', 'array']
 
   def configure(conf)
     super
